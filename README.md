@@ -16,7 +16,7 @@ This repository contains the code for the following npm modules:
 
 ## License
 
-[MIT](https://github.com/Microsoft/vscode-languageserver-node/blob/master/License.txt)
+[MIT](https://github.com/microsoft/vscode-languageserver-node/blob/master/License.txt)
 
 ===
 

@@ -7,4 +7,4 @@ Npm module to implement a VS Code debug adapter using [Node.js](https://nodejs.o
 
 ## License
 
-[MIT](https://github.com/Microsoft/vscode-languageserver-node/blob/master/License.txt)
+[MIT](https://github.com/microsoft/vscode-languageserver-node/blob/master/License.txt)

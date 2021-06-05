@@ -57,11 +57,11 @@ suite('URI', () => {
 
 				// not percent-encoded
 				assert.equal(da.convertClientPath2Debugger('c:\\abc\\foo:bar.js'), 'file:///c:/abc/foo:bar.js');
-				assert.equal(da.convertClientPath2Debugger('c:\\abc\\foo+bar.js'), 'file:///c:/abc/foo+bar.js');	// see https://github.com/Microsoft/vscode-debugadapter-node/issues/182
+				assert.equal(da.convertClientPath2Debugger('c:\\abc\\foo+bar.js'), 'file:///c:/abc/foo+bar.js');	// see https://github.com/microsoft/vscode-debugadapter-node/issues/182
 				assert.equal(da.convertClientPath2Debugger('c:\\abc\\foo_bar.js'), 'file:///c:/abc/foo_bar.js');
 				assert.equal(da.convertClientPath2Debugger('c:\\abc\\foo@bar.js'), 'file:///c:/abc/foo@bar.js');
 
-				// see https://github.com/Microsoft/vscode-debugadapter-node/issues/#159
+				// see https://github.com/microsoft/vscode-debugadapter-node/issues/#159
 				assert.equal(da.convertClientPath2Debugger('c:\\abc\\test.js'), 'file:///c:/abc/test.js');
 
 			} else {
@@ -80,7 +80,7 @@ suite('URI', () => {
 
 				// not percent-encoded
 				assert.equal(da.convertClientPath2Debugger('/abc/foo:bar.js'), 'file:///abc/foo:bar.js');
-				assert.equal(da.convertClientPath2Debugger('/abc/foo+bar.js'), 'file:///abc/foo+bar.js');	// see https://github.com/Microsoft/vscode-debugadapter-node/issues/182
+				assert.equal(da.convertClientPath2Debugger('/abc/foo+bar.js'), 'file:///abc/foo+bar.js');	// see https://github.com/microsoft/vscode-debugadapter-node/issues/182
 				assert.equal(da.convertClientPath2Debugger('/abc/foo_bar.js'), 'file:///abc/foo_bar.js');
 				assert.equal(da.convertClientPath2Debugger('/abc/foo@bar.js'), 'file:///abc/foo@bar.js');
 			}
@@ -107,11 +107,11 @@ suite('URI', () => {
 
 				// not percent-encoded
 				assert.equal(da.convertDebuggerPath2Client('file:///c:/abc/foo:bar.js'), 'c:\\abc\\foo:bar.js');
-				assert.equal(da.convertDebuggerPath2Client('file:///c:/abc/foo+bar.js'), 'c:\\abc\\foo+bar.js');	//see https://github.com/Microsoft/vscode-debugadapter-node/issues/182
+				assert.equal(da.convertDebuggerPath2Client('file:///c:/abc/foo+bar.js'), 'c:\\abc\\foo+bar.js');	//see https://github.com/microsoft/vscode-debugadapter-node/issues/182
 				assert.equal(da.convertDebuggerPath2Client('file:///c:/abc/foo_bar.js'), 'c:\\abc\\foo_bar.js');
 				assert.equal(da.convertDebuggerPath2Client('file:///c:/abc/foo@bar.js'), 'c:\\abc\\foo@bar.js');
 
-				// see https://github.com/Microsoft/vscode-debugadapter-node/issues/#159
+				// see https://github.com/microsoft/vscode-debugadapter-node/issues/#159
 				assert.equal(da.convertDebuggerPath2Client('file:///c:/abc/foo%20bar/test.js'), 'c:\\abc\\foo bar\\test.js');
 
 			} else {
@@ -130,7 +130,7 @@ suite('URI', () => {
 
 				// not percent-encoded
 				assert.equal(da.convertClientPath2Debugger('/abc/foo:bar.js'), 'file:///abc/foo:bar.js');
-				assert.equal(da.convertClientPath2Debugger('/abc/foo+bar.js'), 'file:///abc/foo+bar.js');	// see https://github.com/Microsoft/vscode-debugadapter-node/issues/182
+				assert.equal(da.convertClientPath2Debugger('/abc/foo+bar.js'), 'file:///abc/foo+bar.js');	// see https://github.com/microsoft/vscode-debugadapter-node/issues/182
 				assert.equal(da.convertClientPath2Debugger('/abc/foo_bar.js'), 'file:///abc/foo_bar.js');
 				assert.equal(da.convertClientPath2Debugger('/abc/foo@bar.js'), 'file:///abc/foo@bar.js');
 
