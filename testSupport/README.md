@@ -14,6 +14,8 @@ var dc: DebugClient;
 
 setup( () => {
     dc = new DebugClient('node', './out/node/nodeDebug.js', 'node');
+	dc.on("send", (body: string) =>  console.log("send>>> " + body))
+	dc.on("recv", (body: string) =>  console.log("recv<<< " + body))
     return dc.start();
 });
 

@@ -94,6 +94,7 @@ export class ProtocolClient extends ee.EventEmitter {
 		this.pendingRequests.set(request.seq, clb);
 
 		const json = JSON.stringify(request);
+		this.emit("send", json);
 		this.outputStream.write(`Content-Length: ${Buffer.byteLength(json, 'utf8')}\r\n\r\n${json}`, 'utf8');
 	}
 
@@ -132,7 +133,7 @@ export class ProtocolClient extends ee.EventEmitter {
 	}
 
 	private dispatch(body: string): void {
-
+		this.emit("recv", body);
 		const rawData = JSON.parse(body);
 
 		if (typeof rawData.event !== 'undefined') {
